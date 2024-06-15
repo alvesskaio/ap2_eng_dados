@@ -31,36 +31,36 @@ CREATE TABLE cliente (
 
 -- Populando a tabela de cliente
 INSERT INTO cliente (coddcliente, nome, cidade, estado, genero, dt_nascimento, estadocivil) VALUES 
-(1, 'João Silva', 'São Paulo', 'São Paulo', 'M', '1990-01-01', 'Solteiro(a)'),
-(2, 'Maria Souza', 'Rio de Janeiro', 'Rio de Janeiro', 'F', '1985-05-12', 'Casado(a)'),
-(3, 'Pedro Santos', 'Belo Horizonte', 'Minas Gerais', 'M', '1978-08-30', 'Solteiro(a)'),
-(4, 'Ana Pereira', 'Curitiba', 'Paraná', 'F', '1992-03-22', 'Casado(a)'),
-(5, 'Carlos Oliveira', 'Porto Alegre', 'Rio Grande do Sul', 'M', '1989-12-10', 'Solteiro(a)'),
-(6, 'Beatriz Gomes', 'Salvador', 'Bahia', 'F', '1995-07-07', 'Solteiro(a)'),
-(7, 'Renato Almeida', 'Fortaleza', 'Ceará', 'M', '1982-11-25', 'Casado(a)'),
-(8, 'Clara Lima', 'Manaus', 'Amazonas', 'F', '1993-02-14', 'Solteiro(a)'),
-(9, 'Felipe Araújo', 'Brasília', 'Distrito Federal', 'M', '1987-06-18', 'Casado(a)'),
-(10, 'Juliana Ferreira', 'Recife', 'Pernambuco', 'F', '1980-10-05', 'Solteiro(a)'),
-(11, 'Marcos Rocha', 'Florianópolis', 'Santa Catarina', 'M', '1991-04-15', 'Solteiro(a)'),
-(12, 'Luciana Martins', 'Belém', 'Pará', 'F', '1983-09-09', 'Casado(a)'),
-(13, 'Gabriel Costa', 'São Luís', 'Maranhão', 'M', '1994-01-27', 'Solteiro(a)'),
-(14, 'Paula Carvalho', 'Natal', 'Rio Grande do Norte', 'F', '1990-03-03', 'Casado(a)'),
-(15, 'Rafael Ribeiro', 'Teresina', 'Piauí', 'M', '1986-05-20', 'Solteiro(a)'),
-(16, 'Fernanda Batista', 'João Pessoa', 'Paraíba', 'F', '1988-07-30', 'Casado(a)'),
-(17, 'Gustavo Mendes', 'Maceió', 'Alagoas', 'M', '1979-11-17', 'Solteiro(a)'),
-(18, 'Tatiana Barbosa', 'Aracaju', 'Sergipe', 'F', '1992-04-25', 'Solteiro(a)'),
-(19, 'André Castro', 'Campo Grande', 'Mato Grosso do Sul', 'M', '1984-06-29', 'Casado(a)'),
-(20, 'Camila Costa', 'Cuiabá', 'Mato Grosso', 'F', '1995-08-23', 'Solteiro(a)'),
-(21, 'Thiago Teixeira', 'Goiânia', 'Goiás', 'M', '1989-10-13', 'Solteiro(a)'),
-(22, 'Rosa Almeida', 'Palmas', 'Tocantins', 'F', '1985-12-22', 'Casado(a)'),
-(23, 'Rodrigo Souza', 'Boa Vista', 'Roraima', 'M', '1990-04-04', 'Solteiro(a)'),
-(24, 'Larissa Santos', 'Macapá', 'Amapá', 'F', '1983-07-12', 'Solteiro(a)'),
-(25, 'Lucas Nascimento', 'Porto Velho', 'Rondônia', 'M', '1978-09-15', 'Casado(a)'),
-(26, 'Débora Oliveira', 'Rio Branco', 'Acre', 'F', '1993-05-06', 'Solteiro(a)'),
-(27, 'Vitor Barros', 'Vitória', 'Espírito Santo', 'M', '1987-11-21', 'Solteiro(a)'),
-(28, 'Simone Ferreira', 'São José', 'Santa Catarina', 'F', '1982-02-02', 'Casado(a)'),
-(29, 'Daniel Moreira', 'Santos', 'São Paulo', 'M', '1991-09-11', 'Solteiro(a)'),
-(30, 'Adriana Cardoso', 'Ribeirão Preto', 'São Paulo', 'F', '1994-06-07', 'Solteiro(a)');
+(1, 'João Silva', 'São Paulo', 'São Paulo', 'M', '1990-01-01', 'Solteiro'),
+(2, 'Maria Souza', 'Rio de Janeiro', 'Rio de Janeiro', 'F', '1985-05-12', 'Casado'),
+(3, 'Pedro Santos', 'Belo Horizonte', 'Minas Gerais', 'M', '1978-08-30', 'Solteiro'),
+(4, 'Ana Pereira', 'Curitiba', 'Paraná', 'F', '1992-03-22', 'Casado'),
+(5, 'Carlos Oliveira', 'Porto Alegre', 'Rio Grande do Sul', 'M', '1989-12-10', 'Viuvo'),
+(6, 'Beatriz Gomes', 'Salvador', 'Bahia', 'F', '1995-07-07', 'Solteiro'),
+(7, 'Renato Almeida', 'Fortaleza', 'Ceará', 'M', '1982-11-25', 'Casado'),
+(8, 'Clara Lima', 'Manaus', 'Amazonas', 'F', '1993-02-14', 'Solteiro'),
+(9, 'Felipe Araújo', 'Brasília', 'Distrito Federal', 'M', '1987-06-18', 'Casado'),
+(10, 'Juliana Ferreira', 'Recife', 'Pernambuco', 'F', '1980-10-05', 'Solteiro'),
+(11, 'Marcos Rocha', 'Florianópolis', 'Santa Catarina', 'M', '1991-04-15', 'Solteiro'),
+(12, 'Luciana Martins', 'Belém', 'Pará', 'F', '1983-09-09', 'Casado'),
+(13, 'Gabriel Costa', 'São Luís', 'Maranhão', 'M', '1994-01-27', 'Solteiro'),
+(14, 'Paula Carvalho', 'Natal', 'Rio Grande do Norte', 'F', '1990-03-03', 'Casado'),
+(15, 'Rafael Ribeiro', 'Teresina', 'Piauí', 'M', '1986-05-20', 'Solteiro'),
+(16, 'Fernanda Batista', 'João Pessoa', 'Paraíba', 'F', '1988-07-30', 'Casado'),
+(17, 'Gustavo Mendes', 'Maceió', 'Alagoas', 'M', '1979-11-17', 'Solteiro'),
+(18, 'Tatiana Barbosa', 'Aracaju', 'Sergipe', 'F', '1992-04-25', 'Solteiro'),
+(19, 'André Castro', 'Campo Grande', 'Mato Grosso do Sul', 'M', '1984-06-29', 'Casado'),
+(20, 'Camila Costa', 'Cuiabá', 'Mato Grosso', 'F', '1995-08-23', 'Solteiro'),
+(21, 'Thiago Teixeira', 'Goiânia', 'Goiás', 'M', '1989-10-13', 'Solteiro'),
+(22, 'Rosa Almeida', 'Palmas', 'Tocantins', 'F', '1985-12-22', 'Casado'),
+(23, 'Rodrigo Souza', 'Boa Vista', 'Roraima', 'M', '1990-04-04', 'Solteiro'),
+(24, 'Larissa Santos', 'Macapá', 'Amapá', 'F', '1983-07-12', 'Solteiro'),
+(25, 'Lucas Nascimento', 'Porto Velho', 'Rondônia', 'M', '1978-09-15', 'Casado'),
+(26, 'Débora Oliveira', 'Rio Branco', 'Acre', 'F', '1993-05-06', 'Solteiro'),
+(27, 'Vitor Barros', 'Vitória', 'Espírito Santo', 'M', '1987-11-21', 'Solteiro'),
+(28, 'Simone Ferreira', 'São José', 'Santa Catarina', 'F', '1982-02-02', 'Casado'),
+(29, 'Daniel Moreira', 'Santos', 'São Paulo', 'M', '1991-09-11', 'Solteiro'),
+(30, 'Adriana Cardoso', 'Ribeirão Preto', 'São Paulo', 'F', '1994-06-07', 'Solteiro');
 
 
 
@@ -75,7 +75,7 @@ CREATE TABLE funcionario(
 	cidade varchar(30),
 	estado varchar(30),
 	cargo varchar(30),
-    CONSTRAINT chk_estadocivil_func CHECK (estadocivil IN ('Solteiro(a)', 'Casado(a)', 'Divorciado(a)', 'Viúvo(a)')),
+    CONSTRAINT chk_estadocivil_func CHECK (estadocivil IN ('Solteiro', 'Casado', 'Divorciado', 'Viuvo')),
     CONSTRAINT chk_genero_func CHECK (genero IN ('M', 'F')),  -- Apenas 'M' ou 'F' são permitidos
 	CONSTRAINT chk_estado_func CHECK (estado IN (
         'Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 
@@ -87,36 +87,36 @@ CREATE TABLE funcionario(
 
 -- Populando a tabela de funcionario
 INSERT INTO funcionario (cod_funcionario, nome, genero, dt_nascimento, estadocivil, cidade, estado, cargo) VALUES 
-(1, 'Odelle', 'F', '1980-12-09', 'Divorciado(a)', 'Belo Horizonte', 'Minas Gerais', 'Automation Specialist II'),
-(2, 'Annaliese', 'F', '1985-08-31', 'Casado(a)', 'Fortaleza', 'Ceará', 'Social Worker'),
-(3, 'Tana', 'F', '1978-02-28', 'Viúvo(a)', 'Rio de Janeiro', 'Rio de Janeiro', 'Occupational Therapist'),
-(4, 'Bron', 'M', '1975-08-24', 'Viúvo(a)', 'Porto Velho', 'Rondônia', 'Account Coordinator'),
-(5, 'Jenine', 'F', '1983-07-30', 'Divorciado(a)', 'Vitória', 'Espírito Santo', 'Occupational Therapist'),
-(6, 'Elisa', 'F', '1974-09-14', 'Divorciado(a)', 'Boa Vista', 'Roraima', 'Recruiting Manager'),
-(7, 'Issie', 'F', '1987-01-18', 'Viúvo(a)', 'Macapá', 'Amapá', 'Assistant Manager'),
-(8, 'Davidson', 'M', '1976-05-29', 'Viúvo(a)', 'Uberlândia', 'Minas Gerais', 'Human Resources Assistant I'),
-(9, 'Della', 'F', '1982-01-05', 'Divorciado(a)', 'Vila Velha', 'Espírito Santo', 'Senior Cost Accountant'),
-(10, 'Gilbertine', 'F', '1981-04-15', 'Divorciado(a)', 'Ji-Paraná', 'Rondônia', 'Developer I'),
-(11, 'Deirdre', 'F', '1985-06-10', 'Viúvo(a)', 'Macapá', 'Amapá', 'Physical Therapy Assistant'),
-(12, 'Harvey', 'M', '1980-01-12', 'Divorciado(a)', 'São Paulo', 'São Paulo', 'Staff Scientist'),
-(13, 'Haley', 'M', '1987-02-04', 'Casado(a)', 'Recife', 'Pernambuco', 'Editor'),
-(14, 'Carmine', 'M', '1979-08-13', 'Solteiro(a)', 'Teresina', 'Piauí', 'Marketing Manager'),
-(15, 'Bevvy', 'F', '1984-11-13', 'Casado(a)', 'Palmas', 'Tocantins', 'Recruiter'),
-(16, 'Ricki', 'F', '1986-03-21', 'Casado(a)', 'Belém', 'Pará', 'Help Desk Technician'),
-(17, 'Michell', 'F', '1978-04-04', 'Casado(a)', 'São Luís', 'Maranhão', 'Senior Editor'),
-(18, 'Justino', 'M', '1981-11-23', 'Viúvo(a)', 'Montes Claros', 'Minas Gerais', 'Environmental Specialist'),
-(19, 'Clerc', 'M', '1983-09-18', 'Solteiro(a)', 'Porto Alegre', 'Rio Grande do Sul', 'Cost Accountant'),
-(20, 'Ruprecht', 'M', '1985-06-21', 'Solteiro(a)', 'Salvador', 'Bahia', 'Senior Financial Analyst'),
-(21, 'Tammy', 'M', '1982-11-26', 'Divorciado(a)', 'Belém', 'Pará', 'Associate Professor'),
-(22, 'Reese', 'M', '1988-08-06', 'Solteiro(a)', 'Maceió', 'Alagoas', 'Structural Engineer'),
-(23, 'Farrel', 'M', '1974-06-06', 'Casado(a)', 'Porto Alegre', 'Rio Grande do Sul', 'Desktop Support Technician'),
-(24, 'Terry', 'F', '1978-03-01', 'Viúvo(a)', 'Belém', 'Pará', 'Analyst Programmer'),
-(25, 'Tally', 'F', '1980-12-29', 'Viúvo(a)', 'Porto Velho', 'Rondônia', 'Administrative Officer'),
-(26, 'Justis', 'M', '1985-01-14', 'Casado(a)', 'Porto Velho', 'Rondônia', 'Web Developer IV'),
-(27, 'Darcie', 'F', '1986-07-13', 'Solteiro(a)', 'São Luís', 'Maranhão', 'Librarian'),
-(28, 'Killie', 'M', '1983-03-12', 'Divorciado(a)', 'Campo Grande', 'Mato Grosso do Sul', 'Senior Cost Accountant'),
-(29, 'Hugo', 'M', '1977-03-01', 'Viúvo(a)', 'Manaus', 'Amazonas', 'Data Coordinator'),
-(30, 'Debora', 'F', '1982-02-28', 'Divorciado(a)', 'Brasília', 'Distrito Federal', 'GIS Technical Architect');
+(1, 'Odelle', 'F', '1980-12-09', 'Divorciado', 'Belo Horizonte', 'Minas Gerais', 'Automation Specialist II'),
+(2, 'Annaliese', 'F', '1985-08-31', 'Casado', 'Fortaleza', 'Ceará', 'Social Worker'),
+(3, 'Tana', 'F', '1978-02-28', 'Viuvo', 'Rio de Janeiro', 'Rio de Janeiro', 'Occupational Therapist'),
+(4, 'Bron', 'M', '1975-08-24', 'Viuvo', 'Porto Velho', 'Rondônia', 'Account Coordinator'),
+(5, 'Jenine', 'F', '1983-07-30', 'Divorciado', 'Vitória', 'Espírito Santo', 'Occupational Therapist'),
+(6, 'Elisa', 'F', '1974-09-14', 'Divorciado', 'Boa Vista', 'Roraima', 'Recruiting Manager'),
+(7, 'Issie', 'F', '1987-01-18', 'Viuvo', 'Macapá', 'Amapá', 'Assistant Manager'),
+(8, 'Davidson', 'M', '1976-05-29', 'Viuvo', 'Uberlândia', 'Minas Gerais', 'Human Resources Assistant I'),
+(9, 'Della', 'F', '1982-01-05', 'Divorciado', 'Vila Velha', 'Espírito Santo', 'Senior Cost Accountant'),
+(10, 'Gilbertine', 'F', '1981-04-15', 'Divorciado', 'Ji-Paraná', 'Rondônia', 'Developer I'),
+(11, 'Deirdre', 'F', '1985-06-10', 'Viuvo', 'Macapá', 'Amapá', 'Physical Therapy Assistant'),
+(12, 'Harvey', 'M', '1980-01-12', 'Divorciado', 'São Paulo', 'São Paulo', 'Staff Scientist'),
+(13, 'Haley', 'M', '1987-02-04', 'Casado', 'Recife', 'Pernambuco', 'Editor'),
+(14, 'Carmine', 'M', '1979-08-13', 'Solteiro', 'Teresina', 'Piauí', 'Marketing Manager'),
+(15, 'Bevvy', 'F', '1984-11-13', 'Casado', 'Palmas', 'Tocantins', 'Recruiter'),
+(16, 'Ricki', 'F', '1986-03-21', 'Casado', 'Belém', 'Pará', 'Help Desk Technician'),
+(17, 'Michell', 'F', '1978-04-04', 'Casado', 'São Luís', 'Maranhão', 'Senior Editor'),
+(18, 'Justino', 'M', '1981-11-23', 'Viuvo', 'Montes Claros', 'Minas Gerais', 'Environmental Specialist'),
+(19, 'Clerc', 'M', '1983-09-18', 'Solteiro', 'Porto Alegre', 'Rio Grande do Sul', 'Cost Accountant'),
+(20, 'Ruprecht', 'M', '1985-06-21', 'Solteiro', 'Salvador', 'Bahia', 'Senior Financial Analyst'),
+(21, 'Tammy', 'M', '1982-11-26', 'Divorciado', 'Belém', 'Pará', 'Associate Professor'),
+(22, 'Reese', 'M', '1988-08-06', 'Solteiro', 'Maceió', 'Alagoas', 'Structural Engineer'),
+(23, 'Farrel', 'M', '1974-06-06', 'Casado', 'Porto Alegre', 'Rio Grande do Sul', 'Desktop Support Technician'),
+(24, 'Terry', 'F', '1978-03-01', 'Viuvo', 'Belém', 'Pará', 'Analyst Programmer'),
+(25, 'Tally', 'F', '1980-12-29', 'Viuvo', 'Porto Velho', 'Rondônia', 'Administrative Officer'),
+(26, 'Justis', 'M', '1985-01-14', 'Casado', 'Porto Velho', 'Rondônia', 'Web Developer IV'),
+(27, 'Darcie', 'F', '1986-07-13', 'Solteiro', 'São Luís', 'Maranhão', 'Librarian'),
+(28, 'Killie', 'M', '1983-03-12', 'Divorciado', 'Campo Grande', 'Mato Grosso do Sul', 'Senior Cost Accountant'),
+(29, 'Hugo', 'M', '1977-03-01', 'Viuvo', 'Manaus', 'Amazonas', 'Data Coordinator'),
+(30, 'Debora', 'F', '1982-02-28', 'Divorciado', 'Brasília', 'Distrito Federal', 'GIS Technical Architect');
 
 
 
@@ -301,15 +301,30 @@ DROP TABLE fabricante;
 DROP TABLE funcionario;
 
 -- EX2
--- A
--- B
--- C
--- D 
--- E 
--- F
--- G 
--- H 
--- I 
+
+-- a) Recupere o nome, a cidade e o gênero dos clientes solteiros
+
+SELECT nome, cidade, genero 
+	FROM cliente
+    WHERE estadocivil = 'solteiro'
+
+-- b) Recupere, em ordem alfabética, o nome de todas as cidades que possuem clientes
+
+-- c) Recupere o nome dos clientes que não realizaram compras de produtos de valores acima de 1000 Reais
+
+-- d) Recupere o nome do cliente, o nome do funcionário e o site da marca do produto que ele comprou
+
+-- e) Recupere o total de funcionários com idade maior que 60 anos, cujo estado civil seja Viúvo(a)
+
+-- f) Recupere as 5 compras mais baratas
+
+-- g) Recupere quantidade total de vendas de produtos acima de 100 Reais
+
+-- h) Recupere a lista de produtos, em ordem alfabética, que nunca foram vendidos
+
+-- i) Recupere a valor total de compras realizadas por cada fabricante
+
+-- j) Recupere o valor total de compras que cada funcionário realizou
 
 
 
