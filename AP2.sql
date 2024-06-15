@@ -293,6 +293,10 @@ INSERT INTO possui (cod_compra, cod_produto, valor_desconto, qtd) VALUES
 (2, 29, 1.00, 154),
 (3, 30, 2.00, 942);
 
+
+
+
+
 DROP TABLE possui;
 DROP TABLE compra;
 DROP TABLE cliente;
