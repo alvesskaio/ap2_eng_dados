@@ -297,7 +297,7 @@ INSERT INTO possui (cod_compra, cod_produto, valor_desconto, qtd) VALUES
 (29, 29, 9.50, 130),
 (30, 30, 10.50, 140);
 
-DESC Possui
+DESC Possui;
 
 DROP TABLE possui;
 DROP TABLE compra;
@@ -373,10 +373,9 @@ SELECT DISTINCT cidade
         
 -- g) Recupere quantidade total de vendas de produtos acima de 100 Reais
 
-	SELECT pr.cod_produto, pr.preco, count(co.cod_compra) as qtdVendas
+	SELECT count(co.cod_compra) as qtdVendas
 			FROM compra AS co, possui AS po, produto AS pr
-			WHERE co.cod_compra = po.cod_compra AND pr.cod_produto = po.cod_produto AND pr.preco > 100
-			GROUP BY cod_produto;
+			WHERE co.cod_compra = po.cod_compra AND pr.cod_produto = po.cod_produto AND pr.preco > 100;
 
 -- h) Recupere a lista de produtos, em ordem alfabética, que nunca foram vendidos	
 	
