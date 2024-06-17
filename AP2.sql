@@ -296,6 +296,7 @@ INSERT INTO possui (cod_compra, cod_produto, valor_desconto, qtd) VALUES
 (29, 29, 9.50, 130),
 (30, 30, 10.50, 140);
 
+
 DROP TABLE possui;
 DROP TABLE compra;
 DROP TABLE cliente;
@@ -303,29 +304,88 @@ DROP TABLE produto;
 DROP TABLE fabricante;
 DROP TABLE funcionario;
 
+
 -- EX2
 
 -- a) Recupere o nome, a cidade e o gênero dos clientes solteiros
 
-SELECT nome, cidade, genero 
+SELECT estadocivil, nome, cidade, genero 
 	FROM cliente
-    WHERE estadocivil = 'solteiro'
+    WHERE estadocivil = 'solteiro';
 
 -- b) Recupere, em ordem alfabética, o nome de todas as cidades que possuem clientes
 
+SELECT DISTINCT cidade 
+	FROM cliente 
+    ORDER BY cidade asc;
+
 -- c) Recupere o nome dos clientes que não realizaram compras de produtos de valores acima de 1000 Reais
+
+-- Tabelas :cliente, compra, possui, produto
+
+	SELECT cl.nome as nomecliente
+		FROM cliente AS cl
+		WHERE cl.coddcliente NOT IN ( SELECT co.coddcliente
+						     FROM compra AS co
+						     INNER JOIN possui AS po ON co.cod_compra = po.cod_compra
+						     INNER JOIN produto AS pr ON po.cod_produto
+						     WHERE pr.preco > 1000);
+		
 
 -- d) Recupere o nome do cliente, o nome do funcionário e o site da marca do produto que ele comprou
 
+	SELECT cl.nome AS nomeCliente, fu.nome AS nomeFunc, fa.site AS siteFabricante
+		FROM cliente AS cl
+		INNER JOIN compra AS co ON cl.coddcliente = co.coddcliente
+		INNER JOIN funcionario AS fu ON co.cod_funcionario = fu.cod_funcionario
+		INNER JOIN possui AS po ON co.cod_compra = po.cod_compra
+		INNER JOIN produto AS pr ON po.cod_produto = pr.cod_produto
+		INNER JOIN fabricante AS fa ON pr.cod_fabricante = fa.cod_fabricante;
+
 -- e) Recupere o total de funcionários com idade maior que 60 anos, cujo estado civil seja Viúvo(a)
+
+	SELECT COUNT(*)
+		FROM funcionario
+		WHERE TIMESTAMPDIFF(YEAR, dt_nascimento, CURDATE()) > 60 
+		AND LOWER(estadocivil) = "viuvo";
 
 -- f) Recupere as 5 compras mais baratas
 
+	SELECT co.cod_compra, cl.nome AS nomeCliente, pr.nome AS nomeProduto
+		FROM compra AS co
+		INNER JOIN possui  AS po ON co.cod_compra = po.cod_compra
+		INNER JOIN produto AS pr ON po.cod_produto = pr.cod_produto
+		INNER JOIN cliente AS cl ON co.coddcliente = cl.coddcliente
+		ORDER BY pr.preco ASC
+		LIMIT 5;
+
 -- g) Recupere quantidade total de vendas de produtos acima de 100 Reais
 
--- h) Recupere a lista de produtos, em ordem alfabética, que nunca foram vendidos
+	SELECT  SUM(po.qtd) AS QuantidadeTotal
+			FROM cliente AS cl
+			INNER JOIN compra AS co ON cl.coddcliente = co.coddcliente
+			INNER JOIN possui AS po ON co.cod_compra = po.cod_compra
+			INNER JOIN produto AS pr ON po.cod_produto = pr.cod_produto
+			WHERE pr.preco > 100;
 
+-- h) Recupere a lista de produtos, em ordem alfabética, que nunca foram vendidos	
+	
+	SELECT pr.nome AS nomeProduto
+		FROM produto AS pr
+		LEFT JOIN possui AS po ON pr.cod_produto = po.cod_produto
+		WHERE po.cod_produto IS NULL
+		ORDER BY pr.nome ASC;
+        
 -- i) Recupere a valor total de compras realizadas por cada fabricante
+
+	SELECT fa.nome AS nomeFabricante, SUM(po.qtd * pr.preco) AS valorTotal
+		FROM fabricante AS fa
+        INNER JOIN produto AS pr ON fa.cod_fabricante = pr.cod_fabricante
+        INNER JOIN possui  AS po ON pr.cod_produto    = po.cod_produto
+        INNER JOIN compra  AS co ON po.cod_compra     = co.cod_compra
+        GROUP BY fa.nome
+        ORDER BY valorTotal DESC
+
 
 -- j) Recupere o valor total de compras que cada funcionário realizou
 
