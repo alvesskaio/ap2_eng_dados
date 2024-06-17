@@ -259,6 +259,7 @@ CREATE TABLE possui (
 	cod_produto int,
 	valor_desconto real,
 	qtd int,
+    PRIMARY KEY (cod_compra, cod_produto),
 	FOREIGN KEY (cod_produto) REFERENCES produto(cod_produto),
 	FOREIGN KEY (cod_compra) REFERENCES compra(cod_compra)
 );
@@ -296,6 +297,7 @@ INSERT INTO possui (cod_compra, cod_produto, valor_desconto, qtd) VALUES
 (29, 29, 9.50, 130),
 (30, 30, 10.50, 140);
 
+DESC Possui
 
 DROP TABLE possui;
 DROP TABLE compra;
@@ -404,7 +406,6 @@ SELECT DISTINCT cidade
 			WHERE comp.cod_compra = pos.cod_compra AND pr.cod_produto = pos.cod_produto AND  
 			GROUP BY func.cod_funcionario
 			ORDER BY valor DESC;
-
 
 
 
