@@ -374,7 +374,7 @@ SELECT DISTINCT cidade
 -- g) Recupere quantidade total de vendas de produtos acima de 100 Reais
 
 	SELECT count(co.cod_compra) as qtdVendas
-			FROM compra AS co, possui AS po, produto AS pr
+			FROM compra AS co, possui AS po, produto AS pr    
 			WHERE co.cod_compra = po.cod_compra AND pr.cod_produto = po.cod_produto AND pr.preco > 100;
 
 -- h) Recupere a lista de produtos, em ordem alfabética, que nunca foram vendidos	
@@ -402,7 +402,7 @@ SELECT DISTINCT cidade
 
 	SELECT  func.cod_funcionario, func.nome AS nomeFuncionario, sum(pr.preco * pos.qtd) AS valor
 			FROM produto AS pr, compra AS comp, possui AS pos, funcionario AS func
-			WHERE comp.cod_compra = pos.cod_compra AND pr.cod_produto = pos.cod_produto AND  
+			WHERE comp.cod_compra = pos.cod_compra AND pr.cod_produto = pos.cod_produto 
 			GROUP BY func.cod_funcionario
 			ORDER BY valor DESC;
 
